@@ -44,10 +44,10 @@ const userSchema = new mongoose.Schema({
         default:1,
     },
     rank:{
-        type: String,
+        type: Number,
     },
     attempt:{
-        type: String,
+        type: Number,
     }
 });
 
@@ -71,5 +71,6 @@ userSchema.methods.getJWTToken = function(){
     })
 
 }
+
 
 export const User = mongoose.model('User',userSchema)

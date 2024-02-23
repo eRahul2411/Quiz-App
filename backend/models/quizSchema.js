@@ -1,3 +1,5 @@
+import mongoose from "mongoose";
+
 const quizSchema = new mongoose.Schema({
 
     question:{
@@ -29,7 +31,7 @@ const quizSchema = new mongoose.Schema({
               const options = [this.option1, this.option2, this.option3, this.option4];
               return options.includes(answer);
             },
-            message: 'Answer must match one of the provided options'
+            message: 'Answer must to be same as one of the provided options'
           }
     },
     subjectId:{
@@ -48,7 +50,7 @@ const quizSchema = new mongoose.Schema({
         type:Boolean,
         default:1,
     },
-    author:{
+    postedBy:{
         type: mongoose.Schema.ObjectId,
          ref:'User',
     },

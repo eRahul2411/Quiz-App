@@ -1,4 +1,4 @@
-import { catchAsyncErrors } from "../middlewares/catchAsyncError.js";
+import { catchAsyncErrors } from "../middlewares/catchAsyncErrors.js";
 import { User } from "../models/userSchema.js";
 import ErrorHandler from "../middlewares/error.js";
 import { sendToken } from "../utils/jwtToken.js";
